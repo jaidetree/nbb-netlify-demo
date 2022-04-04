@@ -1,0 +1,23 @@
+{
+  "name": "nbb-netlify-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx netlify-cli functions:serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eccentric-j/nbb-netlify-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eccentric-j/nbb-netlify-demo/issues"
+  },
+  "homepage": "https://github.com/eccentric-j/nbb-netlify-demo#readme",
+  "dependencies": {
+    "nbb": "^0.3.2",
+    "netlify-cli": "^9.16.3"
+  }
+}
