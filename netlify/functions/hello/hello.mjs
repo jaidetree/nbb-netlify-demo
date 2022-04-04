@@ -1,5 +1,6 @@
 // NOTE: When using Netlify prod or dev, it's going to bundle the functions
 //       with esbuild unless otherwise specified
+//       https://docs.netlify.com/functions/optional-configuration/?fn-language=js#bundle-2
 import { loadFile } from "nbb"
 
 export async function handler(event, context) {
