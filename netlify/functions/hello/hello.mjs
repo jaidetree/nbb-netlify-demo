@@ -2,6 +2,7 @@
 //       with esbuild unless otherwise specified
 //       https://docs.netlify.com/functions/optional-configuration/?fn-language=js#bundle-2
 import { loadFile } from "nbb"
+import "nbb/lib/nbb_promesa.js"
 
 export async function handler(event, context) {
 	// Ideally this would live outside out of here but in practice, changing the

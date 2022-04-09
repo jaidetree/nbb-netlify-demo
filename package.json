@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx netlify-cli functions:serve"
+    "start": "npx netlify-cli functions:serve",
+    "deploy":"netlify deploy --site nbb-netlify-demo --dir build/ --prod"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
   },
   "homepage": "https://github.com/eccentric-j/nbb-netlify-demo#readme",
   "dependencies": {
-    "nbb": "^0.3.2",
+    "nbb": "^0.3.4",
     "netlify-cli": "^9.16.3"
   }
 }
