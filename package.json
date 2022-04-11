@@ -4,8 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx netlify-cli functions:serve",
-    "deploy":"netlify deploy --site nbb-netlify-demo --dir build/ --prod"
+    "nbb": "node_modules/.bin/nbb -cp src",
+    "start": "yarn netlify-cli functions:serve",
+    "init": "netlify sites:create",
+    "build": "yarn build:css && npm run build:cljs",
+    "build:cljs": "yarn nbb -m netlify-demo.tasks.build",
+    "build:css": "yarn tailwindcss -i ./src/css/tailwind.css -o ./dist/css/stylesheet.css",
+    "watch:css": "yarn run build:css --watch",
+    "deploy": "netlify deploy --dir dist/ --prod"
   },
   "repository": {
     "type": "git",
@@ -18,7 +24,12 @@
   },
   "homepage": "https://github.com/eccentric-j/nbb-netlify-demo#readme",
   "dependencies": {
-    "nbb": "^0.3.4",
-    "netlify-cli": "^9.16.3"
+    "nbb": "^0.3.4"
+  },
+  "devDependencies": {
+    "netlify-cli": "^9.16.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tailwindcss": "^3.0.23"
   }
 }
